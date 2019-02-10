@@ -8,16 +8,30 @@ Entre otras cosas también hallara guías  de utilidad, descargas de los program
 Aquí muestro la lista de los lenguajes de los cuales pueden encontrar ejemplos:
 
 Python
+
 Java
+
 c++
+
 Turbo Pascal
+
 Html
+
 Javascript
+
 php
+
 vb.net
+
 actionscript 3
+
+
 Android Studio
+
 Jquery
+
 Zen Coding
+
 emmet
-Ultimo Post
+
+
