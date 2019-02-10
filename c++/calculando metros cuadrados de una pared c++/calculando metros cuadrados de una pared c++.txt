@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main(){
+//definiendo variables
+double altura,anchura;
+
+cout<< "Introduzca la altura de la pared en metros" << endl;
+//asignando valor a la variable altura
+cin>>altura;
+
+cout<< "Introduzca la anchura de la pared en metros" << endl;
+//asignando valor a la variable anchura
+cin>>anchura;
+//motrando resultado
+cout<< "El total de los metros cuadrados de superficie de la pared son: " <<altura*anchura<<endl;
+
+
+}
