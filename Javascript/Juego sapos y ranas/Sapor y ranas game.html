@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8">
+<style type="text/css">
+body{margin:0px;
+background-size: cover;}
+.caja {
+position: absolute;
+     }
+img{
+ border: solid #666;
+}
+</style>
+<script type="text/javascript">
+var cont="",CONTT=0;
+var posiciones = { i1: 'negro.png',
+                   i2: 'negro.png',
+       i3: 'negro.png',
+       i4: 'blanco.png',
+       i5: 'rojo.png',
+       i6: 'rojo.png',
+       i7: 'rojo.png'  };
+var z="";
+</script>
+</head>
+<body>
+  <h4>Sapos y ranas</h4>
+
+  <div class="caja">
+  <img src="negro.png" id="i1"/>
+  <img src="negro.png" id="i2"/>
+  <img src="negro.png" id="i3"/>
+  <img src="blanco.png" id="i4"/>
+  <img src="rojo.png" id="i5"/>
+  <img src="rojo.png" id="i6"/>
+  <img src="rojo.png" id="i7"/>
+  
+  </div>
+  
+  <script type="text/javascript">
+           var echo12=false,echo34=false,echo56=false,echo78=false,echo910=false,echo1112=false;
+ //opteniendo id de las img
+ var i=document.getElementById('i1');
+ var i2=document.getElementById('i2');
+        var i3=document.getElementById('i3');
+ var i4=document.getElementById('i4');
+        var i5=document.getElementById('i5');
+ var i6=document.getElementById('i6');
+        var i7=document.getElementById('i7');
+ 
+ //comienzo onclick y function i
+i.onclick    = function(){    /*alert(posiciones[z])   ;*/                        
+(cont==""?cont="i1":cambiando(cont,"i1"));
+};//fin onclick y funtion i
+//comienzo onclick y function i2
+i2.onclick    = function(){                         
+(cont==""?cont="i2":cambiando(cont,"i2"));
+};//fin onclick y funtion i2
+//comienzo onclick y function i3
+i3.onclick    = function(){                         
+(cont==""?cont="i3":cambiando(cont,"i3"));
+};//fin onclick y funtion i3
+//comienzo onclick y function i4
+i4.onclick    = function(){                         
+(cont==""?cont="i4":cambiando(cont,"i4"));
+};//fin onclick y funtion i4
+//comienzo onclick y function i5
+i5.onclick    = function(){                         
+(cont==""?cont="i5":cambiando(cont,"i5"));
+};//fin onclick y funtion i5 
+//comienzo onclick y function i6
+i6.onclick    = function(){                         
+(cont==""?cont="i6":cambiando(cont,"i6"));
+};//fin onclick y funtion i6
+//comienzo onclick y function i7
+i7.onclick    = function(){                         
+(cont==""?cont="i7":cambiando(cont,"i7"));
+};//fin onclick y funtion i7 
+ 
+ //la funcion cambiando servira para poder mover cada imagen
+ function cambiando(con,im)
+ {
+  CONTT=CONTT+1;
+ //comprobando si es un movimiendo correcto
+   $comp=comprobando(con,im);
+ 
+   if(posiciones[con]=='blanco.png' || posiciones[im]=='blanco.png')
+   {
+   if($comp==true){
+  
+      document.getElementById(con).src=posiciones[im];
+      document.getElementById(im).src=posiciones[con];
+    
+      z=posiciones[im];
+      posiciones[im]=posiciones[con];
+      posiciones[con]=z;
+      z="";
+      cont="";
+      triunfo(); 
+          
+    }
+    
+   }
+   
+   
+ 
+ cont="";
+ };
+ //la funcion triunfo es para ver si ya as ganado
+ function triunfo()
+ {
+    if(posiciones.i1=='rojo.png' && posiciones.i1==posiciones.i2
+    &&posiciones.i2==posiciones.i3 && posiciones.i5=='negro.png'  
+    &&posiciones.i5==posiciones.i6&&posiciones.i6==posiciones.i7)
+    {
+     alert('Felicidades as ganado!');//CONTT
+alert('Total de movimientos: '+CONTT+' sabias que en tan solo 15 movimientos lo podrias haber terminado')
+    }
+ };
+//la funcion comprobando es para comprobar que el movimiento se acorrecto
+function comprobando(e1,e2)
+{
+  $vecino="";
+  $comprobante=false;
+     
+if(e1=="i1" && e2=="i3" || e1=="i3" && e2=="i1"){$vecino="i2";}
+if(e1=="i2" && e2=="i4" || e1=="i4" && e2=="i2"){$vecino="i3";}
+if(e1=="i3" && e2=="i5" || e1=="i5" && e2=="i3"){$vecino="i4";}
+if(e1=="i4" && e2=="i6" || e1=="i6" && e2=="i4"){$vecino="i5";}
+if(e1=="i5" && e2=="i7" || e1=="i7" && e2=="i5"){$vecino="i6";}
+ if(posiciones[e1]=='blanco.png')
+   {
+  
+  
+  if($vecino!=""){
+  if(posiciones[e2]!=posiciones[$vecino])
+  {
+   $comprobante=true;
+  }
+  }
+   //comparacion  a
+if(e1=="i1"&&e2=="i2"||e1=="i2"&&e2=="i1"||e1=="i2"&&e2=="i3"||e1=="i3"&&e2=="i2"||e1=="i3"&&e2=="i4"||e1=="i4"&&e2=="i3"||e1=="i4"&&e2=="i5"||e1=="i5"&&e2=="i4"||e1=="i5"&&e2=="i6"||e1=="i6"&&e2=="i5"||e1=="i6"&&e2=="i7"||e1=="i7"&&e2=="i6")
+   {
+     if($comprobante==false)
+     {
+     $comprobante=true;
+     }
+   }//fin if
+    
+   }///-----fin comprobacion e1
+   else if(posiciones[e2]=='blanco.png')
+   {
+    ///-----comprobacion e2
+  
+   if($vecino!=""){
+  if(posiciones[e1]!=posiciones[$vecino])
+  {
+   $comprobante=true;
+  }
+  }
+   //comparacion movimiwntos a
+if(e1=="i1"&&e2=="i2"||e1=="i2"&&e2=="i1"||e1=="i2"&&e2=="i3"||e1=="i3"&&e2=="i2"||e1=="i3"&&e2=="i4"||e1=="i4"&&e2=="i3"||e1=="i4"&&e2=="i5"||e1=="i5"&&e2=="i4"||e1=="i5"&&e2=="i6"||e1=="i6"&&e2=="i5"||e1=="i6"&&e2=="i7"||e1=="i7"&&e2=="i6")
+   {
+     if($comprobante==false)
+     {
+     $comprobante=true;
+     }
+   }//fin if
+   
+   ///-----fin comprobacion e2
+   }
+   return $comprobante;
+ };//fin funcion comprobando
+ 
+ </script>
+  
+  
+  </body>
+  </html>
