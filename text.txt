@@ -253,8 +253,6 @@ function openLocalCity(evt, cityName) {
 //document.getElementById("defaultOpen3").click();
 </script>
 
-
-
    
 </body>
 </html> 
