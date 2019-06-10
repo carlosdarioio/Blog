@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        //asignando clic action al boton
         button=(Button) findViewById(R.id.button);
 
 button.setOnClickListener(this);
@@ -20,6 +20,7 @@ button.setOnClickListener(this);
 
     @Override
     public void onClick(View v) {
+        //Abriendo Main2Activity
         Intent intentLogin = new Intent(this, Main2Activity.class);
         startActivity(intentLogin);
     }

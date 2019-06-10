@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {
+
+    font-weight: normal;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+font-family: 'Tw Cen MT';
+}
+
+/* Style the tab */
+.tab {
+  float: left;
+ 
+  height: 300px;
+}
+.tabLocal {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 20%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  
+  padding: 22px 16px;
+  /*width: 100%;*/
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tabLocal button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+.tabLocal button:hover {
+  /*background-color: #ddd;*/
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+  color: #ec1b2e;
+}
+
+.tabLocal button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  /*border: 1px solid #ccc;*/
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+
+/* Style the tab content */
+.tabcontent2 {
+  float: left;
+  padding: 0px 12px;
+  /*border: 1px solid #ccc;*/
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+
+
+
+@media (max-width: 701px)
+{
+
+	.suc
+		{
+			Width:100$;
+			background-color:blue;
+		}
+}
+
+</style>
+</head>
+<body>
+
+<h2>Sucursales</h2>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'SanPedroSula','defaultOpen2')" id="defaultOpen">San Pedro Sula</button>
+  <button class="tablinks" onclick="openCity(event, 'LaCeiba','defaultOpen3')">La Ceiba</button>
+  <button class="tablinks" onclick="openCity(event, 'Progreso','defaultOpen4')">Progreso</button>
+</div>
+
+<div id="SanPedroSula" class="tabcontent">
+  
+  <!--test-->
+<div class="tabLocal" style="text-align:center">
+  <button class="tablinksLocal" onclick="openLocalCity(event, 'SanPedroSulaLocal')" id="defaultOpen2">AV Junior <img src="025.png" class="Suc"/>   </button>
+  <button class="tablinksLocal" onclick="openLocalCity(event, 'SanPedroSulaLocal2')">Mall Multiplaza <img src="002.png" class="Suc"/> </button>
+  <button class="tablinksLocal" onclick="openLocalCity(event, 'SanPedroSulaLocal3')">Mall Galerias Del Valle<img src="053.png" class="Suc"/> </button>
+</div>
+  <!--test-->
+  <div id="SanPedroSulaLocal" class="tabcontent2">
+  <h3>025</h3>
+  <p>
+  Teléfonos: 000-000 <br>
+  Dirección: Bo. Barandillas, 3 y 4 cll 3 ave. N.E.<br>
+  Horario: Lunes a Sabado 8:00 am - 6:00 pm<br>
+           Domingos: Cerrado<br>
+   <iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3844.573424331695!2d-88.02263928477295!3d15.5073608583678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f665b4f6c9dc52b%3A0x936ca7b9a97d2b7c!2sFemosa!5e0!3m2!1ses-419!2shn!4v1544456549202" width="90%" height="420" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+  </p> 
+</div>
+<div id="SanPedroSulaLocal2" class="tabcontent2">
+  <h3>002</h3>
+  <p>
+  Teléfonos: 000-000 <br>
+  Dirección: Mall Multiplaza, SPS<br>
+  Horario: Lunes a Sabado 10:00 am - 8:00 pm<br>
+  Domingos:10:00 am - 7:00 pm<br>
+  
+  <iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7689.408039155352!2d-88.03172327427644!3d15.500344806938276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f665b61b61feb05%3A0x8b1c8137404bcfd9!2sFEMOSA!5e0!3m2!1ses-419!2shn!4v1544458404814" width="90%" height="420" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+  </p> 
+</div>
+<div id="SanPedroSulaLocal3" class="tabcontent2">
+  <h3>053</h3>
+  <p>
+  Teléfonos: 000-000 <br> 
+  Dirección: Mall Galerías del Valle, Boulevar hacia la UNAH-VS<br>
+  Horario: Lunes a Sabado 10:00 am - 8:00 pm<br>
+  Domingos:10:00 am - 6:00 pm<br>
+  <iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30755.915662433028!2d-88.04485550722991!3d15.511870210540295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f665b225a6cd20b%3A0x71e5928e34763895!2sFEMOSA!5e0!3m2!1ses-419!2shn!4v1544458500018" width="90%" height="420" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+  </p> 
+</div>
+</div>
+
+<div id="LaCeiba" class="tabcontent">
+<div class="tabLocal" style="text-align:center">
+  <button class="tablinksLocal" onclick="openLocalCity(event, 'LaCeibaLocal')" id="defaultOpen3">AV. 14 de julio <img src="081.png" class="Suc"/></button>
+  <button class="tablinksLocal" onclick="openLocalCity(event, 'LaCeibaLocal2')" >AV. 15 de septiembre <img src="038.png" class="Suc"/></button>  
+  </div>
+  
+  
+  <div id="LaCeibaLocal" class="tabcontent2">
+  <h3>038 La Ceiba</h3>
+  <p>
+  Teléfonos: 000-000<br>
+
+Dirección: Boulevar 15 de Septiembre frente al Mercado San José<br>
+
+Horario: Lunes a Sabado 8:00 am - 6:00 pm<br>
+<iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3839.3563015117907!2d-86.7929309848436!3d15.785155789056999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f69a9b774e601d7%3A0x815fe2abadf1c918!2sFerreter%C3%ADa+Moderna+(FEMOSA)!5e0!3m2!1ses-419!2shn!4v1544458728811" width="90%" height="420" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+  </p> 
+</div>
+<div id="LaCeibaLocal2" class="tabcontent2">
+  <h3>082 LaCeiba</h3>
+  <p>
+  Teléfonos: 000000<br>
+
+Dirección: Avenida 14 de Julio frente a Tiendas la Mexicana<br>
+
+Horario: Lunes a Sabado 7:00 am - 5:00 pm
+  </p> 
+</div>
+</div>
+
+<div id="Progreso" class="tabcontent">
+  
+  <div class="tabLocal">
+  <button class="tablinksLocal" onclick="openLocalCity(event, 'ProgresoLocal')" id="defaultOpen4">Mall Progreso <img src="045.png" class="Suc"/></button>  
+  </div>
+  
+  
+  
+<div id="ProgresoLocal" class="tabcontent2">
+  <h3>045 Progreso</h3>
+  <p>
+  Teléfonos: 000-000<br>
+Dirección: Mall Megaplaza, El Progreso<br>
+Horario: Lunes a Sabado 10:00 am - 8:00 pm<br>
+Domingos:11:00 am - 6:00 pm<br>
+
+<iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.2527058120113!2d-87.80486102436923!3d15.419951396671902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f663e4752730311%3A0xff368d93dc63ba9!2sMall+Megaplaza+El+Progreso!5e0!3m2!1ses-419!2shn!4v1544458620042" width="90%" height="420" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+
+  </p>
+</div>
+
+</div>
+
+<script>
+function openCity(evt, cityName,xdefault) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+  
+  document.getElementById(xdefault).click();
+}
+
+// Get the element with id="defaultOpen" and click on it
+
+document.getElementById("defaultOpen").click();
+document.getElementById("defaultOpen2").click();
+//___________________________________________________________________
+function openLocalCity(evt, cityName) {
+  var i, tabcontent2, tablinksLocal;
+  tabcontent2 = document.getElementsByClassName("tabcontent2");
+  for (i = 0; i < tabcontent2.length; i++) {
+    tabcontent2[i].style.display = "none";
+  }
+  tablinksLocal = document.getElementsByClassName("tablinksLocal");
+  for (i = 0; i < tablinksLocal.length; i++) {
+    tablinksLocal[i].className = tablinksLocal[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+//document.getElementById("defaultOpen2").click();
+//document.getElementById("defaultOpen3").click();
+</script>
+
+   
+</body>
+</html> 
